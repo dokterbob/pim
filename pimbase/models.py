@@ -126,7 +126,7 @@ class Organisation(models.Model):
 	country = models.ForeignKey(Country, blank=True, null=True, default=lambda:Country.objects.get(name='Nederland'))
 	sector = models.ForeignKey(Sector, blank=True, null=True)
 	website = models.CharField(max_length=200, blank=True)
-	tags = TaggableManager()
+	#tags = TaggableManager()
 	citizenrole = models.ManyToManyField(CitizenRole, blank=True, null=True,
 	     verbose_name='citizen role',
 	     help_text=_('The sort of relations this organisation has with citizens.'))
